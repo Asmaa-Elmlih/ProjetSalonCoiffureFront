@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="list-client">
+        <p>Liste des Slaons :</p>
+    </div>
+    <div class="kt-portlet__head-toolbar">
+        <div class="kt-portlet__head-wrapper">
+            <div class="kt-portlet__head-actions">
+                <a
+                    href="javascript:; "
+                    (click)="add()"
+                    class="btn btn-outline-success btn-elevate btn-icon-sm"
+                >
+                    Ajouter
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="example-header col-md-4 divFilterInput">
+      <i class="flaticon-search-magnifier-interface-symbol text-dark"></i
+      >&nbsp;
+      <mat-form-field class="example-full-width filterMatFormFiel">
+        <input
+          matInput
+          (keyup)="applyFilter($event.target.value)" class="filterInput" placeholder="filter"
+        />
+      </mat-form-field>
+    </div>
+    
+
+    <table mat-table [dataSource]="salon" class="mat-elevation-z8">
+        <ng-container matColumnDef="Id">
+          <th mat-header-cell *matHeaderCellDef>No.</th>
+          <td mat-cell *matCellDef="let element">{{element.id}}</td>
+        </ng-container>
+        <ng-container matColumnDef="nom">
+          <th mat-header-cell *matHeaderCellDef>Nom de Salon</th>
+          <td mat-cell *matCellDef="let element">{{element.nomSalon}}</td>
+        </ng-container>
+        <ng-container matColumnDef="addresse">
+          <th mat-header-cell *matHeaderCellDef>Addresse</th>
+          <td mat-cell *matCellDef="let element">{{element.addresse}}</td>
+        </ng-container>
+        <ng-container matColumnDef="prop">
+            <th mat-header-cell *matHeaderCellDef>Proprietaire</th>
+            <td mat-cell *matCellDef="let element">{{element.proprietaire.nomProprietaire}}</td>
+          </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let row" class="actionsBtn action">
+            <button
+                type="button"
+                class="btn btn-sm btn-clean btn-icon btn-outline-success btn-icon-md btn_table_show"
+                (click)="Details(row.id)"
+            >
+            <mat-icon>search</mat-icon>
+            </button>
+            <button
+                type="button"
+                class="btn btn-sm btn-clean btn-icon btn-outline-warning btn-icon-md btn_table_edit"
+                (click)="Modifier(row.id)"
+            >
+            <mat-icon>edit</mat-icon>
+            </button>
+            <button type="button" (click)="delete(row.id)"
+                class="btn btn-sm btn-clean btn-icon btn-outline-danger btn-icon-md btn_table_delete"
+                ><mat-icon>delete</mat-icon></button>
+        </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator
+            [length]="totalElements"
+            [pageSize]="size"
+            [pageIndex]="page"
+            [pageSizeOptions]="[5, 10, 50]"
+            (page)="onPageChange($event)"
+            aria-label="Select page"
+        ></mat-paginator>
+
+</body>
+</html>

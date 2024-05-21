@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'salonCoiffureFront';
+  @ViewChild(MatSidenav, { static: true }) sidenav: MatSidenav;
+  // sidenav!: MatSidenav;
+  
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  toggleSidenav() {
+    this.sidenav.toggle();
+  }
 }

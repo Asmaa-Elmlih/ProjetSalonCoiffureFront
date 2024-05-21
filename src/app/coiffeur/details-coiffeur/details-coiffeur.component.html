@@ -1,0 +1,100 @@
+<div autocomplete="off">
+	<div class="kt-portlet portlet-3">
+		<div class="kt-portlet__head kt-bg-portlet-3">
+			<div class="kt-portlet__head-label">
+				<h2 class="kt-portlet__head-title kt-font-inverse-brand">
+					Afficher un Coiffeur:
+				</h2>
+			</div>
+		</div>
+	</div>
+    <form *ngIf="info">
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group fv-plugins-icon-container">
+                <mat-form-field class="example-full-width">
+                    <label>Nom :</label>
+                    <input matInput [value]="info.nomCoiffeur" readonly class="readonly-input">
+                  </mat-form-field>
+                  <div class="fv-plugins-message-container"></div> 
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group fv-plugins-icon-container">
+                <mat-form-field class="example-full-width">
+                    <label>Prenom :</label>
+                    <input   matInput [value]="info.prenomCoiffeur" readonly class="readonly-input">
+                  </mat-form-field>
+                <div class="fv-plugins-message-container"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group fv-plugins-icon-container">
+                <mat-form-field class="example-full-width">
+                    <label>CIN  :</label>
+                    <input matInput [value]="info.cinCoiffeur" readonly class="readonly-input">
+                  </mat-form-field>
+                  <div class="fv-plugins-message-container"></div> 
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group fv-plugins-icon-container">
+                <mat-form-field class="example-full-width">
+                    <label>Numero de Telephone :</label>
+                    <input   matInput [value]="info.telCoiffeur" readonly class="readonly-input">
+                  </mat-form-field>
+                <div class="fv-plugins-message-container"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group fv-plugins-icon-container">
+                <mat-form-field class="example-full-width">
+                    <label>Email :</label>
+                    <input matInput [value]="info.emailCoiffeur" readonly class="readonly-input">
+                  </mat-form-field>
+                  <div class="fv-plugins-message-container"></div> 
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group fv-plugins-icon-container">
+                <mat-form-field class="example-full-width">
+                    <label>Salon :</label>
+                    <input   matInput [value]="info.salon.nomSalon" readonly class="readonly-input">
+                  </mat-form-field>
+                <div class="fv-plugins-message-container"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group fv-plugins-icon-container">
+                  <mat-form-field class="example-full-width">
+                      <label>Proprietaire :</label>
+                      <input   matInput [value]="info.proprietaire.nomProprietaire" readonly class="readonly-input">
+                    </mat-form-field>
+                  <div class="fv-plugins-message-container"></div>
+                </div>
+              </div>
+          </div>
+        
+</form>
+      <div class="kt-portlet__heads" style="margin-top: 20px;margin-right: 265px;">
+        <div class="kt-portlet__head-label" align="right">
+            <button
+                href="javascript:; "
+                (click)="RetourEmbalages()"
+                _ngcontent-dkp-c41=""
+                class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"
+            >
+                <i _ngcontent-dkp-c41="" class="la la-recycle"></i>
+                Retour
+            </button>
+    </div>
+</div>
+</div>
+
+

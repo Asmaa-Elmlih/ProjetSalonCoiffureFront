@@ -1,0 +1,41 @@
+
+.mat-table {
+    width: 1141px;
+    margin-left: 302px;
+    margin-top: 4px;        
+}
+.kt-portlet__head-toolbar{
+    margin-left: 1362px;
+    margin-bottom: 15px;
+}
+.list-client{
+    margin-left: 308px;
+    margin-top: 43px;
+}
+th{
+    width: 78px;
+}
+tr{ 
+    height: 70px;
+}
+.actionsBtn button{
+    width: 32px;
+    height: 31px;
+    margin-left: 6px;
+}
+.actionsBtn mat-icon{
+    margin-left: -4px;
+    font-size: 22px;
+}
+.divFilterInput{
+    margin-left: 297px;
+    margin-top: -58px;
+    margin-bottom: 21px;
+}
+mat-paginator{
+    margin-right: 44px;
+}
+.filterMatFormFiel{
+    width: 267px;
+}
+

@@ -1,0 +1,98 @@
+<div autocomplete="off">
+	<div class="kt-portlet portlet-3">
+		<div class="kt-portlet__head kt-bg-portlet-3">
+			<div class="kt-portlet__head-label">
+				<h2 class="kt-portlet__head-title kt-font-inverse-brand">
+					Ajouter un  client:
+				</h2>
+			</div>
+		</div>
+	</div>
+
+	<form [formGroup]="FormArticle" (ngSubmit)="add()">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group fv-plugins-icon-container">
+              <mat-form-field class="example-full-width">
+                <mat-label> Nom de client: </mat-label>
+                <input matInput formControlName="nomClient" type="text" placeholder="">
+              </mat-form-field>
+              <div class="fv-plugins-message-container"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group fv-plugins-icon-container">
+              <mat-form-field class="example-full-width">
+                <mat-label> Prenom de client: </mat-label>
+                <input matInput formControlName="prenomClient" type="text"  placeholder="">
+              </mat-form-field>
+              <div class="fv-plugins-message-container"></div>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                        <div class="form-group fv-plugins-icon-container">
+                        <mat-form-field class="example-full-width">
+                            <mat-label> CIN de client : </mat-label>
+                            <input matInput formControlName="cinClient" type="text"  placeholder="">
+                        </mat-form-field>
+                        <div class="fv-plugins-message-container"></div>
+                        </div>
+                    </div>
+
+            <div class="col-md-6">
+                        <div class="form-group fv-plugins-icon-container">
+                        <mat-form-field class="example-full-width">
+                            <mat-label> Numero de telephone de client : </mat-label>
+                            <input matInput formControlName="telClient" type="text"  placeholder="">
+                        </mat-form-field>
+                        <div class="fv-plugins-message-container"></div>
+                        </div>
+                    </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+                        <div class="form-group fv-plugins-icon-container">
+                        <mat-form-field class="example-full-width">
+                            <mat-label> Email de client : </mat-label>
+                            <input matInput formControlName="emailClient" type="text" placeholder="">
+                        </mat-form-field>
+                        <div class="fv-plugins-message-container"></div>
+                        </div>
+                    </div>
+
+            <div class="col-md-6">
+                        <div class="form-group fv-plugins-icon-container">
+                            <mat-form-field>
+                                <mat-label>Salon :</mat-label>
+                                <mat-select formControlName="salon">
+                                  <mat-option *ngFor="let salon of salons" [value]="salon">{{salon.nomSalon}} </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        <div class="fv-plugins-message-container"></div>
+                        </div>
+                    </div>
+          </div>
+    
+
+        <div class="kt-portlet__heads" style="margin-top: 20px;">
+            <div class="kt-portlet__head-label btnsAjtAndRtr" align="right">
+                <button
+                    href="javascript:; "
+                    (click)="RetourEmbalages()"
+                    _ngcontent-dkp-c41=""
+                    class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"
+                >
+                    <i _ngcontent-dkp-c41="" class="la la-recycle"></i>
+                    Retour
+                </button>
+        
+                <button class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" type="submit" >
+                    <i class="icon la la-floppy-o"></i>
+                    Enregistrer
+                  </button>
+            </div>
+        </div>
+      </form>

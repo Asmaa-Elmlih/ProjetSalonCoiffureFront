@@ -1,0 +1,30 @@
+*{
+    /* margin: 0px;
+    margin-bottom: auto; */
+    /* padding: 0px; */
+    /* height: auto; */
+    /* box-sizing: content-box !important; */
+}
+/* Annulation de la règle par défaut pour certains éléments */
+/* *, ::after, ::before {
+    box-sizing: content-box !important;
+    height: auto;
+} */
+
+form{
+    width: 922px;
+    margin-left: 385px;
+}
+h2{
+    margin-left: 379px;
+    margin-top: 34px;
+} 
+ .mat-form-field{
+    width: 375px;
+}
+.btnsAjtAndRtr{
+    margin-right: 73px;
+}
+.btn-secondary{
+    margin-right: 4px;
+}

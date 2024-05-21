@@ -1,0 +1,67 @@
+<div autocomplete="off">
+	<div class="kt-portlet portlet-3">
+		<div class="kt-portlet__head kt-bg-portlet-3">
+			<div class="kt-portlet__head-label">
+				<h2 class="kt-portlet__head-title kt-font-inverse-brand">
+					Ajouter un  service:
+				</h2>
+			</div>
+		</div>
+	</div>
+
+	<form [formGroup]="FormArticle" (ngSubmit)="add()">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group fv-plugins-icon-container">
+              <mat-form-field class="example-full-width">
+                <mat-label> Nom de service: </mat-label>
+                <input matInput formControlName="nomService" type="text" placeholder="">
+              </mat-form-field>
+              <div class="fv-plugins-message-container"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group fv-plugins-icon-container">
+              <mat-form-field class="example-full-width">
+                <mat-label> description: </mat-label>
+                <input matInput formControlName="description" type="text"  placeholder="">
+              </mat-form-field>
+              <div class="fv-plugins-message-container"></div>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                        <div class="form-group fv-plugins-icon-container">
+                        <mat-form-field class="example-full-width">
+                            <mat-label> Prix de service : </mat-label>
+                            <input matInput formControlName="prixService" type="number"  placeholder="">
+                        </mat-form-field>
+                        <div class="fv-plugins-message-container"></div>
+                        </div>
+                    </div>
+
+          </div>
+          
+       
+    
+
+        <div class="kt-portlet__heads" style="margin-top: 20px;">
+            <div class="kt-portlet__head-label btnsAjtAndRtr" align="right">
+                <button
+                    href="javascript:; "
+                    (click)="RetourEmbalages()"
+                    _ngcontent-dkp-c41=""
+                    class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"
+                >
+                    <i _ngcontent-dkp-c41="" class="la la-recycle"></i>
+                    Retour
+                </button>
+        
+                <button class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" type="submit" >
+                    <i class="icon la la-floppy-o"></i>
+                    Enregistrer
+                  </button>
+            </div>
+        </div>
+      </form>
